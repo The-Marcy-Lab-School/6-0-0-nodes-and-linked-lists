@@ -12,46 +12,74 @@ You can think of as:
 * Maintaining information
 * Retrieving information
 
-Up to this point one of the main data structure we have been working with are arrays which has a specific implantation every time we use it. But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement?
+Up to this point one of the main data structure we have been working with are arrays which has a specific implementation every time we use it. But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement?
 
 ### ADT
 
-An abstract Data type (ADT) is a type (or class) for objects whose behavior is defined by a set of values and a set of operations, but whose implementation details can vary.
+An **abstract data type (ADT)** is a general description about a data type: how it stores data and what operations can be performed on/with it. Abstract data types may be implemented differently in different programming languages but they will all have the same high-level behavior.
 
-So what does this mean in plain english? In short we have something that can be used but we don't need to know how it will be used yet. Think of a notebook. Some people use it as a journal, other use it to take notes, and some draw in them. In some way shape or form you are making markings in the notebook, that is the defined set of operations. The same things happens in ADT. We know how they work, but we don't need to know how we are going to use them until it's time to use them. 
+<img src="./img/abstract-numbers.png">
+
+For example, an integer is an abstract data type. 
+* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`. 
+* **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided. 
+* **Implementations may vary**: In Java, integers are their own data type, separate from floats (numbers that have decimal points). In JavaScript, integers and floats are all considered the same data type.
+
+<img src="./img/abstract-cars.png">
+
+In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine and with my driver's license, I can operate pretty much any kind of car. However, each manufacturer has a different approach to creating their cars and, under the hood (literally), they may look very different.
+
+<details><summary>Q: What are some other real world analogies of abstract data types?</summary>
+
+* shoes
+* notebooks
+* tables
+* etc...
+
+The list is limitless.
+
+</details>
+<br>
 
 Examples of common abstract data types in JavaScript include:
 
-Linked List
-Stack
-Queue
-Hash Table
-Tree
-Set
-Graph
+* Linked List
+* Stack
+* Queue
+* Hash Table (map)
+* Tree
+* Set
+* Graph
 
 ## So What is a Linked List?
 
-A Linked List is a data structure that consists of a sequence of objects, called nodes, each contains a link or pointer to the next node in the list. The first node in the list is called the head, and the last node in the list is called the tail.
+A Linked List is a data structure that consists of a sequence of objects, called nodes, each contains a link (or pointer) to the next node in the list. The first node in the list is called the head, and the last node in the list is called the tail.
 
 [Visual examples](https://visualgo.net/en/list)
 
 In JavaScript, a Linked list can be implemented using Object Oriented Programming(OOP), where each object represents a node, and contains a property that refers to the next node in the list. Here's an example of a simple implementation of a Linked list in JavaScript:
 
-## Simple Linked list code:
+## Simple Linked list:
+<img src="./img/linked-list.png">
 
 ```js
 const node1 = {//node
-  data: 1 //data
+  data: 'A' //data
+  next: node2
 };
 
 const node2 = {
-  data: 2
+  data: 'B'
 };
 
 const node3 = {
-  data: 3
+  data: 'C'
 };
+
+const node4 = {
+  data: 'D'
+};
+
 console.log(node1);
 
 node1.next = node2;//pointer(link or reference)
