@@ -57,7 +57,6 @@ A Linked List is a data structure that consists of a sequence of objects, called
 
 [Visual examples](https://visualgo.net/en/list)
 
-In JavaScript, a Linked list can be implemented using Object Oriented Programming(OOP), where each object represents a node, and contains a property that refers to the next node in the list. Here's an example of a simple implementation of a Linked list in JavaScript:
 
 ## Simple Linked list:
 <img src="./img/linked-list.png">
@@ -87,7 +86,9 @@ node2.next = node3;
 node3.next = null
 ```
 
-## Linked - list with Classes
+In JavaScript, a Linked list can be implemented using Object Oriented Programming(OOP), where each object represents a node, and contains a property that refers to the next node in the list.
+
+## Linked - With Classes
 
 
 ```js
