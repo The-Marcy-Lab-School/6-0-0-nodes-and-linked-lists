@@ -63,7 +63,7 @@ A Linked List is a data structure that consists of a sequence of objects, called
 
 ```js
 const node1 = {//node
-  data: 'A' //data
+  data: 'A', //data
   next: node2
 };
 
