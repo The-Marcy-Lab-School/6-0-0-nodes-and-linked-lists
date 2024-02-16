@@ -175,6 +175,11 @@ class LinkedList {
 
 ## Linked List Methods
 
+TODO: add this where it belongs
+Insertion at the head: O(1)
+Deletion from the tail: O(1)
+Searching/Accessing: O(n)
+
 These are the methods that are typically associated with Linked List:
 
 `append(data)`/`prepend(data)`: This method is used to add a new node with a given data to the Linked list. Depending on the implementation, this method can add a new node to the tail/ the head. If you want to add a specific index of the Linked list you would need to write a method for it.
