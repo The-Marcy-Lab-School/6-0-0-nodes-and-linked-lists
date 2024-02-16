@@ -1,52 +1,80 @@
 class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
+  constructor(data = null) {
+      this.data = data;
+      this.next = null;
   }
 }
 
 class LinkedList {
+
+  #length = 0;
+
   constructor() {
       this.head = null;
-      // Linked Lists may also have a tail pointer
+      this.tail = null;
   }
-  appendToHead(data) {
+
+  appendToTail(data) {
+      // add new Node with data to tail
       const newNode = new Node(data);
-      newNode.next = this.head;
-      this.head = newNode;
-  }
-  appendToTail(data) { // adding to the end is linear (unless you have a tail pointer)
-      debugger;
-      const newNode = new Node(data);
-      
-      if (this.head === null) {
+      this.#length++;
+      // 0 values
+      if (!this.head && !this.tail) {
           this.head = newNode;
-      } else {
-          let curr = this.head;
-          while (curr.next !== null) {
-              curr = curr.next
+      }
+      else {
+          this.tail.next = newNode;
+      }
+      this.tail = newNode;
+  }
+
+  prependToHead(data) {
+      // add new Node with data to head   
+      const newNode = new Node(data);
+      this.#length++;
+
+      // 0 values
+      if (!this.head && !this.tail) {
+          this.tail = newNode;
+      }
+      else {
+          newNode.next = this.head;
+      }
+
+      this.head = newNode
+  }
+
+  removeHead() {
+      // remove the first Node in the LinkedList and returns its data
+      const data = this.head.data;
+      this.head = this.head.next;
+      this.#length--;
+      return data;
+  }
+
+  contains(data) {
+      // returns true is any Node in the LinkedList contains the value data, false otherwise
+      let currentNode = this.head;
+      while (currentNode) {
+          if (currentNode.data === data) {
+              return true;
           }
-          
-          curr.next = newNode;
+          currentNode = currentNode.next;
       }
+      return false;
   }
-  removeFromHead() { // removing from the head is constant
-      if (this.head == null) {
-          return;
+
+  length() {
+      //returns the length of the LinkedList as an integer value
+      /*
+      let currentNode = this.head;
+      let count = 0;
+      while(currentNode){ 
+          count++;
+          currentNode = currentNode.next;
       }
-      this.head = this.head.next // constant
-  }
-  removeFromTail() { // removing from the tail is ALWAYS linear
-      if (this.head === null) {
-          return;
-      }
-      
-      let curr = this.head;
-      let prev = null;
-      if (curr.next) {
-          prev = curr;
-          curr = curr.next;
-      }
-      prev.next = null;
+      return count;
+      */
+      return this.#length;
   }
 }
