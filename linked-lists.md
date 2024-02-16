@@ -1,12 +1,14 @@
 # Linked Lists
 
-**Essential Questions**
+## Essential Questions
+
 * What is an _abstract data type_?
 * What are the tradeoffs between linked lists and arrays?
 * What are the tradeoffs between singly linked lists and doubly linked lists?
 * What are the run times for insertion, deletion, and accessing from linked lists?
 
-**Key Terms**
+## Key Terms
+
 * Abstract data type
 * Node
 * Singly linked list
@@ -18,14 +20,15 @@
 
 An **abstract data type (ADT)** is a general description about a data type: how it stores data and what operations can be performed on/with it. Abstract data types may be implemented differently in different programming languages but they will all have the same high-level behavior.
 
-<img src="./img/abstract-numbers.png">
+![abstract numbers](./img/abstract-numbers.png)
 
-For example, an integer is an abstract data type. 
-* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`. 
-* **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided. 
+For example, an integer is an abstract data type.
+
+* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`.
+* **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided.
 * **Implementations may vary**: In Java, integers are their own data type, separate from floats (numbers that have decimal points). In JavaScript, integers and floats are all considered the same data type.
 
-<img src="./img/abstract-cars.png">
+![Though cloud of cars](./img/abstract-cars.png)
 
 In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine and with my driver's license, I can operate pretty much any kind of car. However, each manufacturer has a different approach to creating their cars and, under the hood (literally), they may look very different.
 

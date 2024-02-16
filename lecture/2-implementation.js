@@ -55,15 +55,3 @@ const newList = new LinkedList();
 newList.appendToTail("a")
 newList.appendToTail("b")
 newList.appendToTail("c")
-
-
-// const nodeA = new Node("a");
-// const nodeB = new Node("b");
-// const nodeC = new Node("C");
-
-// nodeA.next = nodeB;
-// nodeB.next = nodeC;
-
-// console.log(nodeA)
-// console.log(nodeB)
-// console.log(nodeC);

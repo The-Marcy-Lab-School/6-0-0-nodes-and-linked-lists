@@ -1,31 +1,43 @@
 # 6-0-0-nodes-and-linked-lists
 
-# Linked List
+Welcome to the introductory lecture of Mod X! Today, we're diving into the fundamentals of nodes and linked lists in JavaScript.
+
+Nodes? They're the building blocks of linked lists, acting as data containers in a connected chain.
+
+In this session, we'll unravel the mechanics of linked lists and explore why they're a valuable tool in data management.
+
+So, let's embark on this journey into the world of nodes and linked lists, paving the way for deeper explorations ahead!
 
 ## Data Structures and Abstract Data Types
 
 In Computer Science, a data structure is a way of organizing and storing data in a computer so that it can be accessed, modified and processed efficiently.
 
-You can think of as: 
+You can think of as:
+
 * Inputting information
 * Processing information
 * Maintaining information
 * Retrieving information
 
-Up to this point one of the main data structure we have been working with are arrays which has a specific implementation every time we use it. But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement?
+Up to this point one of the main data structure we have been working with are arrays.
+
+![Visual Representation of an array in memory](https://media.geeksforgeeks.org/wp-content/uploads/array-2.png)
+
+But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement?
 
 ### ADT
 
 An **abstract data type (ADT)** is a general description about a data type: how it stores data and what operations can be performed on/with it. Abstract data types may be implemented differently in different programming languages but they will all have the same high-level behavior.
 
-<img src="./img/abstract-numbers.png">
+![abstract numbers](./img/abstract-numbers.png)
 
-For example, an integer is an abstract data type. 
-* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`. 
+For example, an integer is an abstract data type.
+
+* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`.
 * **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided. 
 * **Implementations may vary**: In Java, integers are their own data type, separate from floats (numbers that have decimal points). In JavaScript, integers and floats are all considered the same data type.
 
-<img src="./img/abstract-cars.png">
+![Though cloud of cars](./img/abstract-cars.png)
 
 In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine and with my driver's license, I can operate pretty much any kind of car. However, each manufacturer has a different approach to creating their cars and, under the hood (literally), they may look very different.
 
@@ -57,9 +69,9 @@ A Linked List is a data structure that consists of a sequence of objects, called
 
 [Visual examples](https://visualgo.net/en/list)
 
-
 ## Simple Linked list:
-<img src="./img/linked-list.png">
+
+![linked-list image](./img/linked-list.png)
 
 ```js
 const node1 = {//node
@@ -89,7 +101,6 @@ node3.next = null
 In JavaScript, a Linked list can be implemented using Object Oriented Programming(OOP), where each object represents a node, and contains a property that refers to the next node in the list.
 
 ## Linked - With Classes
-
 
 ```js
 class Node {
@@ -148,17 +159,19 @@ class LinkedList {
 
 ## Benefits and Drawbacks
 
-Low memory overhead: Linked lists do not require extra memory for storing the size of the list, unlike arrays.
+### Benefits
 
-Space efficiency: In a Linked list, the memory is allocated only when a new element is added, so it can be more space-efficient than an array, which needs to pre-allocate memory for a certain number of elements, whether or not they are used.
+**Low memory overhead**: Linked lists do not require extra memory for storing the size of the list, unlike arrays.
 
-No need to shift elements: In an array, when you insert or delete an element in the middle of the array, you need to shift all the elements after it to make space or fill the gap. This can take O(n) time, where n is the number of elements in the array. In a Linked list, you only need to update the references of the surrounding nodes, so there's no need to shift any elements, making the insertion and deletion more efficient.
+**Space efficiency**: In a Linked list, the memory is allocated only when a new element is added, so it can be more space-efficient than an array, which needs to pre-allocate memory for a certain number of elements, whether or not they are used.
 
-Drawbacks:
+**No need to shift elements**: In an array, when you insert or delete an element in the middle of the array, you need to shift all the elements after it to make space or fill the gap. This can take O(n) time, where n is the number of elements in the array. In a Linked list, you only need to update the references of the surrounding nodes, so there's no need to shift any elements, making the insertion and deletion more efficient.
 
-Search operations are slower in Linked lists: In an array, you grab elements using random access, the ability to reference values based on their index. With Linked lists, there is no random access. You must traverse the Linked list starting from the head node.
+### Drawbacks
 
-Another tradeoff is that it uses more memory than arrays because of the the pointers are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its own separate node, and each node contains a reference, called a "link", to the next node in the list.
+**Search operations are slower in Linked lists**: In an array, you grab elements using random access, the ability to reference values based on their index. With Linked lists, there is no random access. You must traverse the Linked list starting from the head node.
+
+**Each node requires more memory than an element in an array:** Nodes in a linked list uses more memory than elements in an arrays because og the the pointers that are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its own separate node, and each node contains a reference, called a "link", to the next node in the list.
 
 ## Linked List Methods
 
@@ -183,4 +196,3 @@ These methods are the most common ones, but depending on the implementation, a L
 The performance of these methods can vary depending on the implementation. For example, an singly Linked list implementation may have a O(n) performance for find and remove methods, while a doubly Linked list implementation would have a O(1) performance for the same methods.
 
 Oh wait! What are singly and doubly Linked list?
-
