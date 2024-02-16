@@ -39,9 +39,9 @@ For example, an integer is an abstract data type.
 
 ![Though cloud of cars](./img/abstract-cars.png)
 
-In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine and with my driver's license, I can operate pretty much any kind of car. However, each manufacturer has a different approach to creating their cars and, under the hood (literally), they may look very different.
+In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine, and with my driver's license, I can operate pretty much any car. However, each manufacturer has a different approach to creating their cars, and under the hood (literally), they may look very different.
 
-<details><summary>Q: What are some other real world analogies of abstract data types?</summary>
+<details><summary>Q: What are some other real-world analogies of abstract data types?</summary>
 
 * shoes
 * notebooks
@@ -163,32 +163,27 @@ class LinkedList {
 
 **Low memory overhead**: Linked lists do not require extra memory for storing the size of the list, unlike arrays.
 
-**Space efficiency**: In a Linked list, the memory is allocated only when a new element is added, so it can be more space-efficient than an array, which needs to pre-allocate memory for a certain number of elements, whether or not they are used.
+**Space efficiency**: In a Linked list, the memory is allocated only when a new node is added, so it can be more space-efficient than an array, which needs to pre-allocate memory for a certain number of elements, whether or not they are used.
 
-**No need to shift elements**: In an array, when you insert or delete an element in the middle of the array, you need to shift all the elements after it to make space or fill the gap. This can take O(n) time, where n is the number of elements in the array. In a Linked list, you only need to update the references of the surrounding nodes, so there's no need to shift any elements, making the insertion and deletion more efficient.
+**No need to shift elements**: When you insert or delete an element in the middle of the array, you need to shift all the elements after it to make space or fill the gap. This can take O(n) time, where n is the number of elements in the array. In a Linked list, you only need to update the references of the surrounding nodes, so there's no need to shift any elements, making the insertion and deletion more efficient.
 
 ### Drawbacks
 
 **Search operations are slower in Linked lists**: In an array, you grab elements using random access, the ability to reference values based on their index. With Linked lists, there is no random access. You must traverse the Linked list starting from the head node.
 
-**Each node requires more memory than an element in an array:** Nodes in a linked list uses more memory than elements in an arrays because og the the pointers that are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its own separate node, and each node contains a reference, called a "link", to the next node in the list.
+**Each node requires more memory than an element in an array:** Nodes in a linked list use more memory than elements in an array because of the the pointers that are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its separate node, and each node contains a reference, called a "link", to the next node in the list.
 
 ## Linked List Methods
 
-TODO: add this where it belongs
-Insertion at the head: O(1)
-Deletion from the tail: O(1)
-Searching/Accessing: O(n)
-
 These are the methods that are typically associated with Linked List:
 
-`append(data)`/`prepend(data)`: This method is used to add a new node with a given data to the Linked list. Depending on the implementation, this method can add a new node to the tail/ the head. If you want to add a specific index of the Linked list you would need to write a method for it.
+`append(data)`/`prepend(data)`: This method is used to add a new node with a given data to the Linked list. Depending on the implementation, this method can add a new node to the tail/head. If you want to add a specific  point of the Linked list, you would need to write a method for it. 
 
 `remove(data)`: This method is used to remove a node with a given data from the Linked list. It typically searches for the first occurrence of the node with the matching data and removes it from the list.
 
-`removeFirst()`/`removeLast()` : This method is used to remove the first or last node in the Linked list.(also known as `removeHead()`/`removeLastTail()`).
+`removeFirst()`/`removeLast()`: This method is used to remove the first or last node in the Linked list.(also known as `removeHead()`/`removeLastTail()`).
 
-`find(data)`: This method is used to find a node with a given data in the Linked list. It typically searches the list for the first occurrence of the node with the matching data and returns it.(you can also call it `contains()`).
+`find(data)`: This method is used to find a node with a given data in the Linked list. It typically searches the list for the first occurrence of the node with the matching data and returns it. (you can also call it `contains()`).
 
 `length()`: This method returns the number of nodes in the Linked list.
 
@@ -198,6 +193,16 @@ These are the methods that are typically associated with Linked List:
 
 These methods are the most common ones, but depending on the implementation, a Linked list can have additional methods such as `getFirst()`, `getLast()`, `get(index)`, `insertAt(data, index)`, `reverse()`, `sort()`, `mergeList()` among others.
 
-The performance of these methods can vary depending on the implementation. For example, an singly Linked list implementation may have a O(n) performance for find and remove methods, while a doubly Linked list implementation would have a O(1) performance for the same methods.
+The performance of these methods can vary depending on the implementation. For example, a singly Linked list implementation may have an O(n) performance for find and remove methods, while a doubly Linked list implementation would have an O(1) performance for the same methods.
 
-Oh wait! What are singly and doubly Linked list?
+Here are some of the most important ones:
+
+Insertion at the head: O(1) - Constant time. Since we're only manipulating the head pointer, the time it takes to insert a new node at the beginning of the list remains constant, regardless of the list's size.
+
+Deletion from the tail: O(n) - Linear time. Deleting a node from the tail requires traversing the entire list to reach the second-to-last node. Thus, the time it takes to delete a node from the end of the list grows linearly with the size of the list.
+
+Searching: O(n) - Linear time. To find a specific value in a singly linked list, we need to traverse the list from the head to the tail, or until we find the target value. As the size of the list grows, the time it takes to search also increases linearly.
+
+Accessing a value at a specific index: O(n) - Linear time. Similar to searching, accessing a value at a particular index requires traversing the list from the head until reaching the desired index. As with searching, the time complexity is linear in the worst case.
+
+Oh wait! What are single and doubly Linked lists?
