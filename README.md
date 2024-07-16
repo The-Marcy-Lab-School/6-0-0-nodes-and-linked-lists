@@ -1,6 +1,6 @@
 # 6-0-0-nodes-and-linked-lists
 
-Welcome to the introductory lecture of Mod X! Today, we're diving into the fundamentals of nodes and linked lists in JavaScript.
+Welcome to the introductory lecture of Mod 6(formally unit x)! Today, we're diving into the fundamentals of nodes and linked lists in JavaScript.
 
 Nodes? They're the building blocks of linked lists, acting as data containers in a connected chain.
 
@@ -10,7 +10,7 @@ So, let's embark on this journey into the world of nodes and linked lists, pavin
 
 ## Data Structures and Abstract Data Types
 
-In Computer Science, a data structure is a way of organizing and storing data in a computer so that it can be accessed, modified and processed efficiently.
+In Computer Science, a data structure is a way of organizing and storing data in a computer so that it can be accessed, modified, and processed efficiently.
 
 You can think of as:
 
@@ -19,11 +19,11 @@ You can think of as:
 * Maintaining information
 * Retrieving information
 
-Up to this point one of the main data structure we have been working with are arrays.
+Up to this point, one of the main data structures we have been working with has been arrays.
 
 ![Visual Representation of an array in memory](https://media.geeksforgeeks.org/wp-content/uploads/array-2.png)
 
-But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement?
+But what if we have a data structure that we know how it inputs, processes, maintains, and gets data, but we don't know how we are going to implement it?
 
 ### ADT
 
@@ -189,7 +189,7 @@ class LinkedList {
 
 ### Benefits
 
-**Low memory overhead**: Linked lists do not require extra memory for storing the size of the list, unlike arrays.
+**Low memory overhead**: Linked lists do not require extra memory to store the size of the list, unlike arrays.
 
 **Space efficiency**: In a Linked list, the memory is allocated only when a new node is added, so it can be more space-efficient than an array, which needs to pre-allocate memory for a certain number of elements, whether or not they are used.
 
@@ -199,15 +199,15 @@ class LinkedList {
 
 **Search operations are slower in Linked lists**: In an array, you grab elements using random access, the ability to reference values based on their index. With Linked lists, there is no random access. You must traverse the Linked list starting from the head node.
 
-**Each node requires more memory than an element in an array:** Nodes in a linked list use more memory than elements in an array because of the the pointers that are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its separate node, and each node contains a reference, called a "link", to the next node in the list.
+**Each node requires more memory than an element in an array:** Nodes in a linked list use more memory than elements in an array because of the pointers that are stored. Rather than being stored in a heap of contiguous memory locations like an array, a Linked list is stored in its separate node, and each node contains a reference, called a "link," to the next node in the list.
 
 ## Linked List Methods
 
 These are the methods that are typically associated with Linked List:
 
-`append(data)`/`prepend(data)`: This method is used to add a new node with a given data to the Linked list. Depending on the implementation, this method can add a new node to the tail/head. If you want to add a specific  point of the Linked list, you would need to write a method for it. 
+`append(data)`/`prepend(data)`: This method is used to add a new node with a given data to the Linked list. This method can add a new node to the tail/head, depending on the implementation. If you want to add a specific  point to the Linked list, you must write a method for it. 
 
-`remove(data)`: This method is used to remove a node with a given data from the Linked list. It typically searches for the first occurrence of the node with the matching data and removes it from the list.
+`remove(data)`: This method removes a node with a given data from the Linked list. It typically searches for the first occurrence of the node with the matching data and removes it from the list.
 
 `removeFirst()`/`removeLast()`: This method is used to remove the first or last node in the Linked list.(also known as `removeHead()`/`removeLastTail()`).
 
@@ -225,12 +225,12 @@ The performance of these methods can vary depending on the implementation. For e
 
 Here are some of the most important ones:
 
-Insertion at the head: O(1) - Constant time. Since we're only manipulating the head pointer, the time it takes to insert a new node at the beginning of the list remains constant, regardless of the list's size.
+Insertion at the head: O(1) - Constant time. Since we're only manipulating the head pointer, inserting a new node at the beginning of the list remains constant, regardless of the list's size.
 
 Deletion from the tail: O(n) - Linear time. Deleting a node from the tail requires traversing the entire list to reach the second-to-last node. Thus, the time it takes to delete a node from the end of the list grows linearly with the size of the list.
 
-Searching: O(n) - Linear time. To find a specific value in a singly linked list, we need to traverse the list from the head to the tail, or until we find the target value. As the size of the list grows, the time it takes to search also increases linearly.
+Searching: O(n) - Linear time. To find a specific value in a singly linked list, we need to traverse the list from the head to the tail or until we find the target value. As the size of the list grows, the time it takes to search also increases linearly.
 
-Accessing a value at a specific index: O(n) - Linear time. Similar to searching, accessing a value at a particular index requires traversing the list from the head until reaching the desired index. As with searching, the time complexity is linear in the worst case.
+Accessing a value at a specific index: O(n) - Linear time. Like searching, accessing a value at a particular index requires traversing the list from the head until reaching the desired index. As with searching, the time complexity is linear in the worst case.
 
-Oh wait! What are single and doubly Linked lists?
+Oh, wait! What are single and doubly Linked lists?
